@@ -4,6 +4,7 @@
 @import 'main-banner';
 @import 'sectionWhy';
 @import 'section-latest';
+@import 'footer';
 * {
   box-sizing: border-box;
 }
@@ -13,6 +14,10 @@ body {
   font-family: $fm;
   background-color: $very-light-gray;
   font-size: 18px;
+  overflow-x: hidden;
+  @media (min-width: 375px) and (max-width: 768px) {
+    font-size: .9rem;
+  }
 
 }
 li {

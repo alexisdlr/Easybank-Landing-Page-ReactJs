@@ -35,6 +35,7 @@
   padding: 0 3rem;
   @include flex-center;
   background-color: $color;
+ 
 }
 @mixin title ($size, $weight){
   font-weight: $weight;

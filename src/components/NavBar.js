@@ -1,4 +1,6 @@
+import React,{useState} from 'react'
 import logo from '../images/logo.svg'
+import burguer from '../images/icon-hamburger.svg'
 
 export const Link = ({className, content}) => {
   return (
@@ -9,6 +11,11 @@ export const Link = ({className, content}) => {
 }
 
  export const NavBar = () => {
+  const [clicked, setClicked] = useState(false)
+
+  const handleClick = () => {
+    setClicked(!clicked)
+  }
   const dataNav = [
     {id: 1, text: 'Home'},
     {id: 2, text: 'About'},
@@ -22,7 +29,7 @@ export const Link = ({className, content}) => {
         <div>
           <img src={logo} alt='logo' className='logo' />
         </div>
-        <ul className="navigation__ul">
+        <ul className={`navigation__ul ${clicked ? 'active': ''}`}>
           {
             dataNav.map(item => (
               <li className="navigation__ul-li" key={item.id}>
@@ -38,7 +45,13 @@ export const Link = ({className, content}) => {
           <button className='navigation__containerCard--button'>
             Request Invite
           </button>
+       
         </div>
+        <button 
+        onClick={handleClick}
+        className='burguer'>
+            <img src={burguer} alt='hamburguer svg'  />
+        </button>
       </nav>
     </header> 
   )

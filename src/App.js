@@ -1,6 +1,7 @@
 import {NavBar} from "./components/NavBar"
 import Main from "./components/Layout/Main"
 import Section from "./components/Section"
+import Footer from "./components/Layout/Footer";
 
 
 function App() {
@@ -15,7 +16,9 @@ function App() {
         <Section
           isBanner={false}
           className="section-latest"      
-        />     
+        />    
+        <Footer />
+     
     </div>
   );
 }

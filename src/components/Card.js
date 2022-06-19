@@ -1,4 +1,5 @@
 import {Title} from "./common/Typography"
+import { Link } from "./NavBar"
 
 const Card = ({title,text,icon, isArticle, by}) => {
   return (
@@ -7,11 +8,13 @@ const Card = ({title,text,icon, isArticle, by}) => {
    <img src={icon} alt='icon svg'  className="card-image" />
     <div className="card__text">
         <p className="card__text-by">{by}</p>
-        <Title
-        isHeading={false}
-        content={title}
-        className='card__text-title'
-      />
+       <Link 
+        className='link' 
+        content={<Title
+            isHeading={false}
+            content={title}
+            className='card__text-title'
+            />} />
       <p className="card__text-parag">{text}</p>
     </div>
    
