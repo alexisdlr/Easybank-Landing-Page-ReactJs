@@ -1,0 +1,37 @@
+.main-banner {
+  @include containerSection($very-light-gray);
+  
+  
+  .container {
+    @include container(50%);
+    
+    &__text {
+      width: 50%;
+      flex-direction: column;
+      &-parag {
+       @include parag;
+
+      }
+    }
+    &__img {
+      position: relative;
+      &-img {
+        width: 100%;
+      }
+      &-mockup {
+        width: 80%;
+        position: absolute;
+        top: 0;
+        z-index: 10;
+      }
+    }
+    .title {
+     @include title(3rem, 300);
+    }
+    
+  }
+  .link {
+    @include btn;
+  }
+}
+

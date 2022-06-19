@@ -1,0 +1,30 @@
+.navigation {
+  max-height: 60px;
+  @include flex-around;
+  padding:.5rem 3rem;
+  background-color: $white;
+
+  &__ul {
+    @include flex-center;
+    gap: 1rem;
+
+    &-li {
+      .link {
+        color: $grayish-blue;
+        font-size: 15px;
+        cursor: pointer;
+        padding-bottom: 1rem;
+        transition: $transition;
+        &:hover {
+          border-bottom: 3px solid $lime-Green;
+        }
+      }
+    }
+  }
+  .navigation__containerCard--button {
+    @include btn;
+  }
+  img {
+    margin-left: 3rem;
+  }
+}
