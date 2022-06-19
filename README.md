@@ -1,6 +1,6 @@
 # Frontend Mentor - Easybank landing page
 
-Finish Design: 
+Final Design: 
 <img src='public/final/desktop.jpg' />
 <hr>
 ## Welcome! 👋
